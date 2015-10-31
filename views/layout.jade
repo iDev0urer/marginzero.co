@@ -1,0 +1,14 @@
+block vars
+html(lang="en")
+    head
+        title= pageTitle
+        link(rel="stylesheet", href="/stylesheets/css/app.css")
+        script(type="text/javascript", href="/scripts/js/shapes-pollyfill.min.js")
+        script(type="text/javascript", href="/scripts/js/semantic.min.js")
+        script(type="text/javascript", href="/scripts/js/app.js")
+        script(src="https://use.typekit.net/you1vsr.js")
+        script(type="text/javascript").
+            try{Typekit.load({ async: true });}catch(e){}
+    body
+        div#top-orange
+        block content

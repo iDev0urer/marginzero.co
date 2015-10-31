@@ -1,0 +1,180 @@
+@import 'lib/semantic/semantic';
+@import 'lib/_variables';
+@import 'lib/_mixins';
+@import 'lib/_elements';
+@import 'lib/_helpers';
+
+
+.mz-logo {
+
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &.no-text {
+    background-image: url('/images/mz-logo.png');
+  }
+  &.text-bottom {
+    background-image: url('/images/mz-logo-text-bottom.png');
+  }
+  &.text-only {
+    background-image: url('/images/mz-logo-text-only.png');
+  }
+}
+
+i.black-x {
+  background: transparent url('/images/black-x.png') center center no-repeat;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.accent-line-top {
+  &:before {
+    content: ' ';
+    width: 2px;
+    height: 100px;
+    background-color: @orange-base;
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.accent-line-bottom {
+  &:after {
+    content: ' ';
+    width: 2px;
+    height: 100px;
+    background-color: @orange-base;
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+#top-orange {
+  height: 30px;
+  width: 100%;
+  background: @orange-base;
+}
+
+header#main-header {
+  background-color: #FFFFFF;
+  padding: 30px 0;
+  margin-bottom: 100px;
+
+  .mz-logo.text-bottom {
+    display: block;
+    max-width: 200px;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  #macbook-with-x {
+    background: transparent url('/images/macbook-with-x.png') center center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 650px;
+    height: 515px;
+    width: 45vw;
+    height: 36vw;
+    display: block;
+  }
+
+  nav#main-nav {
+    -webkit-transform: rotate(-90deg) translateX(-100%);
+    -moz-transform: rotate(-90deg) translateX(-100%);
+    -ms-transform: rotate(-90deg) translateX(-100%);
+    -o-transform: rotate(-90deg) translateX(-100%);
+    transform: rotate(-90deg) translateX(-100%);
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    transform-origin: left top;
+    width: 100vh;
+    text-align: center;
+    /* position: fixed; */
+
+    ul {
+      list-style-type: none;
+      li {
+        list-style-type: none;
+        display: inline-block;
+        margin: 0 20px;
+        a {
+          color: @gray-base;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 18px;
+
+          &:hover {
+            position: relative;
+            z-index: 2;
+
+            &:before {
+              content: ' ';
+              background: transparent url('/images/orange-x.png') center center no-repeat;
+              width: 40px;
+              height: 40px;
+              display: block;
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%) translateY(-25%);
+              z-index: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#about-us {
+  background: @gray-base url('/images/iphone-in-hand.png') 10% bottom no-repeat;
+  width: 100%;
+  display: block;
+  transform: skewY(-2deg);
+  background-size: 60%;
+  margin-bottom: 80px;
+
+
+  .container {
+    transform: skewY(2deg);
+  }
+
+  h1.about-us {
+    color: #FFFFFF;
+    transform-origin: bottom left;
+    transform: rotate(-90deg) translateX(-82%);
+    text-align: right;
+    text-transform: uppercase;
+    margin-left: 30px;
+  }
+
+  .info {
+    padding: 80px 0;
+    h2 {
+      color: #FFF;
+      margin-bottom: 50px;
+    }
+    p {
+      color: @jet;
+    }
+  }
+
+}
+
+#services {
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.circle {
+  shape-outside: circle(50%);
+  width: 100px;
+  height: 100px;
+  float: left;
+  shape-margin: 1em;
+}
